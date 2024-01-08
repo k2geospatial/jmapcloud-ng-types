@@ -163,7 +163,7 @@ export interface JAppFeatureService {
   openEditMenuById(layerId: JId, featureId: JId): Promise<GeoJSON.Feature>
   openEditMenuByIds(layerId: JId, featureIds: JId[]): Promise<GeoJSON.Feature[]>
   closeEditMenu(): void
-  deleteByIds(layerId: JId, featureIds: JId[]): Promise<JFeatureDeleteByIdsResult>
+  deleteByIds(layerId: JId, featureIds: JId[]): Promise<JId[]>
 }
 
 export interface JAppProjectService {
@@ -339,7 +339,7 @@ export interface JAppPrintService {
   setFileType(fileType: JAPP_PRINT_FILE_TYPES): void
   getFileType(): JAPP_PRINT_FILE_TYPES
   setHiResolution(isHiResolution: boolean): void
-  getHiResolution():boolean
+  getHiResolution(): boolean
   takeCapture(): void
 }
 
