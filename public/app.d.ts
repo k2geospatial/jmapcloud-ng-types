@@ -365,6 +365,36 @@ declare namespace JMap {
        * ```
        */
       function getPresetColors(): string[]
+
+      /**
+       * **JMap.Application.Annotation.setSnapEnabled**
+       *
+       * Enables or disables snap mode.
+       *
+       * @param isEnabled true to enable snap mode, false to disable
+       * @throws if isEnabled is not a boolean
+       * @example ```ts
+       *
+       * // enable snap mode
+       * JMap.Application.Annotation.setSnapEnabled(true)
+       * ```
+       */
+      function setSnapEnabled(isEnabled: boolean): void
+
+      /**
+       * **JMap.Application.Annotation.setSnapLayerId**
+       *
+       * set the layer id to snap on.
+       *
+       * @param layerId the JMap layer id
+       * @throws if layer not found
+       * @example ```ts
+       *
+       * // snap will target the features of the layer having id=1
+       * JMap.Application.Annotation.setSnapLayerId(1)
+       * ```
+       */
+      function setSnapLayerId(layerId: JId): void
     }
     /**
      * **JMap.Application.Panel**
@@ -676,6 +706,36 @@ declare namespace JMap {
        * ```
        */
       function closePanel(): void
+
+      /**
+       * **JMap.Application.Geometry.setSnapEnabled**
+       *
+       * Enables or disables snap mode.
+       *
+       * @param isEnabled true to enable snap mode, false to disable
+       * @throws if isEnabled is not a boolean
+       * @example ```ts
+       *
+       * // enable snap mode
+       * JMap.Application.Geometry.setSnapEnabled(true)
+       * ```
+       */
+      function setSnapEnabled(isEnabled: boolean): void
+
+      /**
+       * **JMap.Application.Geometry.setSnapLayerId**
+       *
+       * set the layer id to snap on.
+       *
+       * @param layerId the JMap layer id
+       * @throws if layer not found
+       * @example ```ts
+       *
+       * // snap will target the features of the layer having id=1
+       * JMap.Application.Geometry.setSnapLayerId(1)
+       * ```
+       */
+      function setSnapLayerId(layerId: JId): void
     }
 
     /**
@@ -972,6 +1032,36 @@ declare namespace JMap {
        * ```
        */
       function setMeasurementSystem(measurementSystem: JAPP_MEASUREMENT_SYSTEMS): void
+
+      /**
+       * **JMap.Application.Measure.setSnapEnabled**
+       *
+       * Enables or disables snap mode.
+       *
+       * @param isEnabled true to enable snap mode, false to disable
+       * @throws if isEnabled is not a boolean
+       * @example ```ts
+       *
+       * // enable snap mode
+       * JMap.Application.Measure.setSnapEnabled(true)
+       * ```
+       */
+      function setSnapEnabled(isEnabled: boolean): void
+
+      /**
+       * **JMap.Application.Measure.setSnapLayerId**
+       *
+       * set the layer id to snap on.
+       *
+       * @param layerId the JMap layer id
+       * @throws if layer not found
+       * @example ```ts
+       *
+       * // snap will target the features of the layer having id=1
+       * JMap.Application.Measure.setSnapLayerId(1)
+       * ```
+       */
+      function setSnapLayerId(layerId: JId): void
     }
 
     /**
