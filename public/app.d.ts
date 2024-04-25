@@ -390,8 +390,8 @@ declare namespace JMap {
        * @throws if layer not found
        * @example ```ts
        *
-       * // snap will target the features of the layer having id=1
-       * JMap.Application.Annotation.setSnapLayerId(1)
+       * // snap will target the features of the layer having id="36885146-7eed-4071-9f86-8e29c505af91"
+       * JMap.Application.Annotation.setSnapLayerId("36885146-7eed-4071-9f86-8e29c505af91")
        * ```
        */
       function setSnapLayerId(layerId: JId): void
@@ -731,8 +731,8 @@ declare namespace JMap {
        * @throws if layer not found
        * @example ```ts
        *
-       * // snap will target the features of the layer having id=1
-       * JMap.Application.Geometry.setSnapLayerId(1)
+       * // snap will target the features of the layer having id="36885146-7eed-4071-9f86-8e29c505af91"
+       * JMap.Application.Geometry.setSnapLayerId("36885146-7eed-4071-9f86-8e29c505af91")
        * ```
        */
       function setSnapLayerId(layerId: JId): void
@@ -1057,8 +1057,8 @@ declare namespace JMap {
        * @throws if layer not found
        * @example ```ts
        *
-       * // snap will target the features of the layer having id=1
-       * JMap.Application.Measure.setSnapLayerId(1)
+       * // snap will target the features of the layer having id="36885146-7eed-4071-9f86-8e29c505af91"
+       * JMap.Application.Measure.setSnapLayerId("36885146-7eed-4071-9f86-8e29c505af91")
        * ```
        */
       function setSnapLayerId(layerId: JId): void
