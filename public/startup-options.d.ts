@@ -1,9 +1,10 @@
 declare interface JCoreOptions {
   /**
    * This section is about the JMap Cloud NG startup options.
-   * 
+   *
    * An example of how to configure the application startup options :
-   * @example ```html
+   * @example
+   * ```html
    * <html>
    *   ...
    *   <body>
@@ -26,7 +27,7 @@ declare interface JCoreOptions {
    *    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jmapcloud-ng@0.1.1/public/index.js"></script>
    *   </body>
    * </html>
-   * 
+   *
    * ```
    */
   application?: JApplicationOptions
@@ -35,9 +36,9 @@ declare interface JCoreOptions {
 declare interface JApplicationOptions {
   /**
    * When the application start it will create or use an existing div container in which the app will be inserted into.
-   * 
+   *
    * All application dom elements will be inserted inside this div.
-   * 
+   *
    * By default the div container id is "***jmapcloud-ng***", but you can set the id of your choice like that :
    * ```html
    * <html>
@@ -58,7 +59,7 @@ declare interface JApplicationOptions {
    * ```
    *
    * In the above example the application will be inserted in the div having "my-custom-container-id" as id. You need to set the width and the height of this div by yourself.
-   * 
+   *
    * If no container is found in the DOM with the specified id, JMap Cloud NG will create and append it automatically in the body element of the web page.
    */
   containerId?: string
@@ -66,7 +67,7 @@ declare interface JApplicationOptions {
   /**
    * Set a custom application background login image, by default the JMap background is displayed.
    * Background login image is used for login screen.
-   * 
+   *
    * ```html
    * <html>
    *   ...
@@ -85,12 +86,12 @@ declare interface JApplicationOptions {
    * </html>
    * ```
    */
-   loginBackgroundImageUrl?: string
+  loginBackgroundImageUrl?: string
 
   /**
    * Set a custom application background project image, by default the JMap background is displayed.
    * Background project image is used for projects screen.
-   * 
+   *
    * ```html
    * <html>
    *   ...
@@ -109,11 +110,11 @@ declare interface JApplicationOptions {
    * </html>
    * ```
    */
-   projectBackgroundImageUrl?: string
+  projectBackgroundImageUrl?: string
 
   /**
    * Set a custom application logo, by default the JMap logo is displayed.
-   * 
+   *
    * ```html
    * <html>
    *   ...
@@ -136,7 +137,7 @@ declare interface JApplicationOptions {
 
   /**
    * Set the UI theme as dark or light.
-   * 
+   *
    * ```html
    * <html>
    *   ...
@@ -159,11 +160,11 @@ declare interface JApplicationOptions {
 
   /**
    * By default the active panel (the one displayed), is the "layer" panel.
-   * 
+   *
    * Standard application panels ids are : "layer", "selection", "measure", "mapcontext", "print", "user", "query", "annotation".
-   * 
+   *
    * But if ***panel*** is defined, it will display the corresponding panel on the screen.
-   * 
+   *
    * ```html
    * <html>
    *   ...
@@ -186,11 +187,11 @@ declare interface JApplicationOptions {
 
   /**
    * The application have multiple panels available by default : "layer", "selection", "measure", "mapcontext", "print", "user", "query", "annotation".
-   * 
+   *
    * But you can tell JMap Cloud NG to disabled some panels. If a panel is disabled it will disappear on the left menu.
-   * 
+   *
    * The ***disabledPanels*** parameter is an array with the panel ids you want to be disabled.
-   * 
+   *
    * ```html
    * <html>
    *   ...
@@ -213,9 +214,9 @@ declare interface JApplicationOptions {
 
   /**
    * Controls the side panel default visibility state.
-   * 
+   *
    * The JMap Cloud NG side panel is open by default when the application starts, but you can change this behaviour by using this option.
-   *  
+   *
    * ```html
    * <html>
    *   ...
@@ -241,9 +242,9 @@ declare interface JApplicationOptions {
    *  - A valid user session is set
    *  - A project is selected
    *  - The main menu is rendered
-   * 
+   *
    * It could be called multiple times, if the user change the project, or the user logout and login.
-   * 
+   *
    * ```html
    * <html>
    *   ...
@@ -268,9 +269,9 @@ declare interface JApplicationOptions {
    * If provided this function will be processed each time the application is not loaded anymore :
    *  - User session token become invalid
    *  - Project is changed and app is loading the new one
-   * 
+   *
    * It could be called multiple times.
-   * 
+   *
    * ```html
    * <html>
    *   ...
@@ -293,9 +294,9 @@ declare interface JApplicationOptions {
 
   /**
    * You can provide your own application extensions.
-   * 
+   *
    * This mechanism offer a way to add your own panel, map interactor, redux store data, etc ...
-   * 
+   *
    * You can fully customize JMap Cloud NG with your own code, written with your favourite dev tools.
    */
   extensions?: JAppExtension[]
