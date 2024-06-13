@@ -2406,6 +2406,8 @@ declare namespace JMap {
        *
        * Builds a screen capture of the map and launches the download of the file, or returns the screen capture as a data url embeded in a {@link JAppPrintCaptureResult}
        * @param returnAsScreenCaptureResult if true, the method will resolve with a {@link JAppPrintCaptureResult} that you can use to embed the image in an HTML page, otherwise the method will resolve with no result
+       * @param customWidth The custom width. When both customWidth and customHeight are specified, the captured image will be using a custom paper format having the aspect ratio defined by the specified width/height. returnAsScreenCaptureResult must be set to "true" for this parameter to be taken into account
+       * @param customHeight The custom height. returnAsScreenCaptureResult must be set to "true" for this parameters to be taken into account
        *
        * When passing `returnAsScreenCaptureResult = true`, The screen capture process will take into account all Print parameters defined in the Print panel, including page format, scale, North arrow, title, sub-title, etc, but with the following limitations:
        *
@@ -2434,7 +2436,11 @@ declare namespace JMap {
        * )
        * ```
        */
-      function takeCapture(returnAsScreenCaptureResult?: boolean): Promise<void | JAppPrintCaptureResult>
+      function takeCapture(
+        returnAsScreenCaptureResult?: boolean,
+        customWidth?: number,
+        customHeight?: number
+      ): Promise<void | JAppPrintCaptureResult>
     }
 
     /**
