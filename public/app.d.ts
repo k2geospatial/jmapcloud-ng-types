@@ -2273,7 +2273,6 @@ declare namespace JMap {
        *
        * Different sizes are available: "letter" | "legal" | "a3" | "a4".
        *
-       * @deprecated will be removed in the futur
        * @example
        * ```ts
        * // returns all available paper formats
@@ -2289,7 +2288,6 @@ declare namespace JMap {
        *
        * Technical method, you should not use it.
        *
-       * @deprecated will be removed in the futur
        * @throws if format is incorrect
        * @param format the paper format object or a {@link JAPP_PRINT_PAPER_SIZES}
        * @example
@@ -2305,7 +2303,6 @@ declare namespace JMap {
        *
        * Returns the active paper format.
        *
-       * @deprecated will be removed in the futur
        * @example
        * ```ts
        * // returns active paper format
