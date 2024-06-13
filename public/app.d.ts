@@ -2421,7 +2421,7 @@ declare namespace JMap {
        * JMap.Application.Print.takeCapture()
        *
        * // add an image to a document with the print result
-       * JMap.Application.Print.takeCapture(true).then(
+       * JMap.Application.Print.takeCapture(true, 400, 200).then(
        *    printCaptureResult => {
        *      const img = document.createElement("img")
        *      img.src = printCaptureResult.dataUrl
