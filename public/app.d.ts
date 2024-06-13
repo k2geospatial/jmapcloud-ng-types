@@ -2409,7 +2409,7 @@ declare namespace JMap {
        * @param customWidth The custom width. When both customWidth and customHeight are specified, the captured image will be using a custom paper format having the aspect ratio defined by the specified width/height. returnAsScreenCaptureResult must be set to "true" for this parameter to be taken into account
        * @param customHeight The custom height. returnAsScreenCaptureResult must be set to "true" for this parameters to be taken into account
        *
-       * When passing `returnAsScreenCaptureResult = true`, The screen capture process will take into account all Print parameters defined in the Print panel, including page format, scale, North arrow, title, sub-title, etc, but with the following limitations:
+       * When passing `returnAsScreenCaptureResult = true`, the screen capture process will take into account all Print parameters defined in the Print panel, including page format, scale, North arrow, title, sub-title, etc, but with the following limitations:
        *
        * * the image format returned will always be PNG
        * * If you want the Print panel overlays be present in the screen capture, you must programaticaly switch to the Print panel before calling JMap.Application.Print.takeCapture(true), otherwise only the map will be captured
