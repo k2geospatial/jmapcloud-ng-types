@@ -359,8 +359,8 @@ export interface JAppPrintService {
   getHiResolution(): boolean
   takeCapture(
     returnAsScreenCaptureResult?: boolean,
-    customWidth?: number,
-    customHeight?: number
+    customRatioWidth?: number,
+    customRatioHeight?: number
   ): Promise<void | JAppPrintCaptureResult>
 }
 
