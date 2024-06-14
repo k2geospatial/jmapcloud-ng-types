@@ -2406,8 +2406,10 @@ declare namespace JMap {
        *
        * Builds a screen capture of the map and launches the download of the file, or returns the screen capture as a data url embeded in a {@link JAppPrintCaptureResult}
        * @param returnAsScreenCaptureResult if true, the method will resolve with a {@link JAppPrintCaptureResult} that you can use to embed the image in an HTML page, otherwise the method will resolve with no result
+       * @param customRatioWidth The custom ratio width. When both customRatioWidth and customRatioHeight are specified, the captured image will be using a custom paper format having the aspect ratio defined by the specified width/height. returnAsScreenCaptureResult must be set to "true" for this parameter to be taken into account
+       * @param customRatioHeight The custom ratio height. returnAsScreenCaptureResult must be set to "true" for this parameters to be taken into account
        *
-       * When passing `returnAsScreenCaptureResult = true`, The screen capture process will take into account all Print parameters defined in the Print panel, including page format, scale, North arrow, title, sub-title, etc, but with the following limitations:
+       * When passing `returnAsScreenCaptureResult = true`, the screen capture process will take into account all Print parameters defined in the Print panel, including page format, scale, North arrow, title, sub-title, etc, but with the following limitations:
        *
        * * the image format returned will always be PNG
        * * If you want the Print panel overlays be present in the screen capture, you must programaticaly switch to the Print panel before calling JMap.Application.Print.takeCapture(true), otherwise only the map will be captured
@@ -2419,7 +2421,7 @@ declare namespace JMap {
        * JMap.Application.Print.takeCapture()
        *
        * // add an image to a document with the print result
-       * JMap.Application.Print.takeCapture(true).then(
+       * JMap.Application.Print.takeCapture(true, 400, 200).then(
        *    printCaptureResult => {
        *      const img = document.createElement("img")
        *      img.src = printCaptureResult.dataUrl
@@ -2434,7 +2436,11 @@ declare namespace JMap {
        * )
        * ```
        */
-      function takeCapture(returnAsScreenCaptureResult?: boolean): Promise<void | JAppPrintCaptureResult>
+      function takeCapture(
+        returnAsScreenCaptureResult?: boolean,
+        customRatioWidth?: number,
+        customRatioHeight?: number
+      ): Promise<void | JAppPrintCaptureResult>
     }
 
     /**

@@ -10,7 +10,8 @@ declare const enum JAPP_PRINT_PAPER_SIZES {
   LETTER = "letter",
   LEGAL = "legal",
   A3 = "a3",
-  A4 = "a4"
+  A4 = "a4",
+  CUSTOM = "custom"
 }
 
 // ALL_APP_PRINT_LEGEND_POSITION in all-enum.ts
