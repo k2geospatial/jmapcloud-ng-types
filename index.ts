@@ -27,6 +27,7 @@ export interface JAppGeometryState {
   draw: JAppDrawState
   lastSnap: JAppSnap
   snap: JAppSnap
+  isAttributesEditing: boolean
 }
 
 export interface JAppFeatureState {
