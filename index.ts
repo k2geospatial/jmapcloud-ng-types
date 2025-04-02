@@ -15,6 +15,12 @@ export interface JAppState {
   user: JAppUserState
   feature: JAppFeatureState
   geometry: JAppGeometryState
+  table: JAppTableState
+}
+
+export interface JAppTableState {
+  displayTable: boolean
+  activeTableId: JId | undefined
 }
 
 export interface JAppGeometryState {
