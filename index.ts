@@ -20,7 +20,7 @@ export interface JAppState {
 
 export interface JAppTableState {
   displayTable: boolean
-  activeTableId: JId | undefined
+  activeTableDataSourceId: JId | undefined
 }
 
 export interface JAppGeometryState {
