@@ -7,6 +7,7 @@ export interface JAppState {
   selection: JAppSelectionState
   layer: JAppLayerState
   ui: JAppUiState
+  map: JAppMapState
   query: JAppQueryState
   print: JAppPrintState
   project: JAppProjectState
@@ -72,6 +73,11 @@ export interface JAppUiState {
   sidePanelVisible: boolean
   mainPanelWidthInPixel: number
   theme: { [key: string]: any }
+}
+
+export interface JAppMapState {
+  simpleSearchControlVisible: boolean
+  geocodingControlVisible: boolean
 }
 
 export interface JAppFormState {
@@ -276,6 +282,12 @@ export interface JApplicationUIService {
   Theme: {
     setDark(isDark: boolean): void
     isDark(): boolean
+  }
+  Map: {
+    isGeocodingControlVisible(): boolean
+    setGeocodingControlVisibility(isVisible: boolean): void
+    isSimpleSearchControlVisible(): boolean
+    setSimpleSearchControlVisibility(isVisible: boolean): void
   }
 }
 

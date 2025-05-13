@@ -2070,6 +2070,17 @@ declare namespace JMap {
          */
         function getTitleMinHeightInPixel(): number
       }
+      /**
+       * **JMap.Application.UI.Map**
+       *
+       * You can manage the Map UI here.
+       */
+      namespace Map {
+        function isGeocodingControlVisible(): boolean
+        function setGeocodingControlVisibility(isVisible: boolean): void
+        function isSimpleSearchControlVisible(): boolean
+        function setSimpleSearchControlVisibility(isVisible: boolean): void
+      }
 
       /**
        * **JMap.Application.UI.Theme**
