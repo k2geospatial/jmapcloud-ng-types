@@ -159,6 +159,54 @@ declare interface JApplicationOptions {
   theme?: "dark" | "light"
 
   /**
+   * By default the Simple Search control is visible.
+   *
+   * But if ***simpleSearchControlVisible*** is false, it will be hidden over the map.
+   *
+   * ```html
+   * <html>
+   *   ...
+   *   <body>
+   *     <script type="text/javascript">
+   *       window.JMAP_OPTIONS = {
+   *         ...
+   *         application: {
+   *           simpleSearchControlVisible: false,
+   *         }
+   *       }
+   *     </script>
+   *     ...
+   *   </body>
+   * </html>
+   * ```
+   */
+  simpleSearchControlVisible?: boolean
+
+  /**
+   * By default the Geocoding control is visible.
+   *
+   * But if ***geocodingControlVisible*** is false, it will be hidden over the map.
+   *
+   * ```html
+   * <html>
+   *   ...
+   *   <body>
+   *     <script type="text/javascript">
+   *       window.JMAP_OPTIONS = {
+   *         ...
+   *         application: {
+   *           geocodingControlVisible: false,
+   *         }
+   *       }
+   *     </script>
+   *     ...
+   *   </body>
+   * </html>
+   * ```
+   */
+  geocodingControlVisible?: boolean
+
+  /**
    * By default the active panel (the one displayed), is the "layer" panel.
    *
    * Standard application panels ids are : "layer", "selection", "measure", "mapcontext", "print", "user", "query", "annotation".
