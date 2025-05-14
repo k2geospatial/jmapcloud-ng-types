@@ -2076,9 +2076,64 @@ declare namespace JMap {
        * You can manage the Map UI here.
        */
       namespace Map {
+        /**
+         * **JMap.Application.UI.Map.isGeocodingControlVisible**
+         *
+         * Returns true if the geocoding control is currently visible.
+         *
+         * @example
+         * ```ts
+         * // true or false
+         * JMap.Application.UI.Map.isGeocodingControlVisible()
+         * ```
+         */
         function isGeocodingControlVisible(): boolean
+
+        /**
+         * **JMap.Application.UI.Map.setGeocodingControlVisibility**
+         *
+         * Displays or hides the geocoding control.
+         *
+         * @param isVisible true to display, false to hide
+         * @example
+         * ```ts
+         * // Display the geocoding control
+         * JMap.Application.UI.Map.setGeocodingControlVisibility(true)
+         *
+         * // Hide the geocoding control
+         * JMap.Application.UI.Map.setGeocodingControlVisibility(false)
+         * ```
+         */
         function setGeocodingControlVisibility(isVisible: boolean): void
+
+        /**
+         * **JMap.Application.UI.Map.isSimpleSearchControlVisible**
+         *
+         * Returns true if the Simple Search control is currently visible.
+         *
+         * @example
+         * ```ts
+         * // true or false
+         * JMap.Application.UI.Map.isSimpleSearchControlVisible()
+         * ```
+         */
         function isSimpleSearchControlVisible(): boolean
+
+        /**
+         * **JMap.Application.UI.Map.setSimpleSearchControlVisibility**
+         *
+         * Displays or hides the Simple Search control.
+         *
+         * @param isVisible true to display, false to hide
+         * @example
+         * ```ts
+         * // Display the Simple Search control
+         * JMap.Application.UI.Map.setSimpleSearchControlVisibility(true)
+         *
+         * // Hide the Simple Search control
+         * JMap.Application.UI.Map.setSimpleSearchControlVisibility(false)
+         * ```
+         */
         function setSimpleSearchControlVisibility(isVisible: boolean): void
       }
 
