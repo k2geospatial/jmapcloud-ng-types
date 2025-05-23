@@ -8,7 +8,6 @@ export interface JAppState {
   layer: JAppLayerState
   ui: JAppUiState
   map: JAppMapState
-  query: JAppQueryState
   print: JAppPrintState
   project: JAppProjectState
   annotation: JAppAnnotationState
@@ -49,12 +48,6 @@ export interface JAppProjectState {
   showProjectList: boolean
 }
 
-export interface JAppQueryState {
-  activeQuery: JQuery | undefined
-  defaultValueById: { [id: string]: any } | undefined
-  displayInDialog: boolean
-}
-
 export interface JAppPanelState {
   active: JAppPanel
   all: JAppPanel[]
@@ -81,7 +74,7 @@ export interface JAppMapState {
 }
 
 export interface JAppFormState {
-  expandedSections: { [id: string]: boolean }
+  dialogParams: formDialogParams
 }
 
 export interface JAppMeasureState {
@@ -161,7 +154,6 @@ export interface JApplicationService extends JApplicationMainService {
   Layer: JAppLayerService
   Print: JAppPrintService
   UI: JApplicationUIService
-  Query: JAppQueryService
   Event: JAppEventService
   Annotation: JAppAnnotationService
   Extension: JAppExtensionService
@@ -230,16 +222,6 @@ export interface JAppAnnotationService {
   getPresetColors(): string[]
   addPresetColor(presetColor: string): void
   deletePresetColor(presetColor: string): void
-}
-
-export interface JAppQueryService {
-  activateQuery(groupId: JId, queryId: string): void
-  deactivateQuery(): void
-  setDefaultData(values: any): void
-  getDefaultData(): { [id: string]: any }
-  clearDefaultData(): void
-  displayInDialog(isVisibleInDialog: boolean): void
-  processQuery(values: any): Promise<GeoJSON.Feature[]>
 }
 
 export interface JApplicationUserService {
@@ -435,8 +417,9 @@ export interface JAppLayerTreeFilterService {
 }
 
 export interface JAppFormService {
-  render(containerId: string, formParams: JFormParams): JFormMetaData
-  destroyByContainerId(containerId: string): void
+  setFormData(params: formDialogParams): void
+  //  render(containerId: string, formParams: JFormParams): JFormMetaData
+  //  destroyByContainerId(containerId: string): void
 }
 
 export interface JAppAppEventModule extends JEventModule {
