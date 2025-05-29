@@ -6,7 +6,7 @@ declare type formDialogParams = {
 } | {
   type: "table"
   table: JTable
-  row: { [key: string]: any }
+  row?: { [key: string]: any }
   isReadOnly: boolean
   onCreate: () => void
 } | null
