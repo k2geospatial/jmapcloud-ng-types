@@ -5,7 +5,8 @@ declare type formDialogParams = {
   feature?: GeoJSON.Feature
 } | {
   type: "table"
-  tableId: JId
+  table: JTable
   row: { [key: string]: any }
   isReadOnly: boolean
+  onCreate: () => void
 } | null
