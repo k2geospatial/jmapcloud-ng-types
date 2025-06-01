@@ -74,7 +74,7 @@ export interface JAppMapState {
 }
 
 export interface JAppFormState {
-  dialogParams: formDialogParams
+  dialogParams: JFormDialogParams | null
 }
 
 export interface JAppMeasureState {
@@ -417,9 +417,7 @@ export interface JAppLayerTreeFilterService {
 }
 
 export interface JAppFormService {
-  setFormData(params: formDialogParams): void
-  //  render(containerId: string, formParams: JFormParams): JFormMetaData
-  //  destroyByContainerId(containerId: string): void
+  openForm(params: JFormDialogParams): void
 }
 
 export interface JAppAppEventModule extends JEventModule {

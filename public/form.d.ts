@@ -1,12 +1,16 @@
-declare type formDialogParams = {
-  type: "layer"
+declare type JFormDialogParams = JFormDialogLayerParams | JFormDialogTableParams
+
+declare type JFormDialogLayerParams = {
   layerId: JId
   featureId?: JId
   feature?: GeoJSON.Feature
-} | {
-  type: "table"
+  isReadOnly: boolean
+  onSubmit?: () => void
+}
+
+declare type JFormDialogTableParams = {
   table: JTable
   row?: { [key: string]: any }
   isReadOnly: boolean
-  onCreate: () => void
-} | null
+  onSubmit?: () => void
+}  

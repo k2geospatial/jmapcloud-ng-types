@@ -3349,6 +3349,50 @@ declare namespace JMap {
      * You can render forms using this.
      */
     namespace Form {
+      /**
+       * **JMap.Application.Form.openForm**
+       *
+       * Opens a form dialog in the application. Depending on the shape of `params`, this will open either:
+       *  - a layer-based form (when `layerId` is provided), or
+       *  - a table-based form (when `table` is provided).
+       *
+       * When opening a layer form:
+       *  - `layerId` is required.
+       *  - You can optionally pass `featureId` or a full `feature` (GeoJSON.Feature) to edit an existing feature.
+       *  - `isReadOnly` controls whether the form is editable.
+       *  - `onSubmit` (if provided) is called after the user submits the form.
+       *
+       * When opening a table form:
+       *  - `table` is required.
+       *  - You can optionally pass `row` (an object of key/value pairs) to edit an existing row.
+       *  - `isReadOnly` controls whether the form is editable.
+       *  - `onSubmit` (if provided) is called after the user submits the form.
+       *
+       * @param params The parameters that configure which form to open:
+       *   - For a **layer form**:
+       *     - `layerId` (string): The ID of the layer to open the form for.
+       *     - `featureId?` (string): (Optional) The ID of the feature in that layer to load.
+       *     - `feature?` (GeoJSON.Feature): (Optional) A full GeoJSON feature to load instead of just an ID.
+       *   - For a **table form**:
+       *     - `table` (JTable): The table object to open the form for.
+       *     - `row?` ({ [key: string]: any }): (Optional) The row data to load into the form.
+       *   - Common to both shapes:
+       *     - `isReadOnly` (boolean): If `true`, the form will be displayed in read‐only mode.
+       *     - `onSubmit?` (() => void): (Optional) Callback invoked after the form is successfully submitted.
+       * @example
+       * ```ts
+       * // Example: Open a layer form for editing an existing feature
+       * formSVC.openForm({
+       *   layerId: "db4bc79b-03fe-4cf7-a4bc-fb76d69cabdf",
+       *   featureId: "3022",
+       *   isReadOnly: false,
+       *   onSubmit: () => {
+       *     console.log("Layer form submitted successfully");
+       *   }
+       * });
+       * ```
+       */
+      function openForm(params: JFormDialogParams): void
     }
   }
 }
