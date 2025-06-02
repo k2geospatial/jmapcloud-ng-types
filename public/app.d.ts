@@ -3354,7 +3354,7 @@ declare namespace JMap {
        *
        * Opens a form dialog in the application. Depending on the shape of `params`, this will open either:
        *  - a layer-based form (when `layerId` is provided), or
-       *  - a table-based form (when `table` is provided).
+       *  - a table-based form (when `tableId` is provided).
        *
        * When opening a layer form:
        *  - `layerId` is required.
@@ -3363,7 +3363,7 @@ declare namespace JMap {
        *  - `onSubmit` (if provided) is called after the user submits the form.
        *
        * When opening a table form:
-       *  - `table` is required.
+       *  - `tableId` is required.
        *  - You can optionally pass `row` (an object of key/value pairs) to edit an existing row.
        *  - `isReadOnly` controls whether the form is editable.
        *  - `onSubmit` (if provided) is called after the user submits the form.
@@ -3374,7 +3374,7 @@ declare namespace JMap {
        *     - `featureId?` (string): (Optional) The ID of the feature in that layer to load.
        *     - `feature?` (GeoJSON.Feature): (Optional) A full GeoJSON feature to load instead of just an ID.
        *   - For a **table form**:
-       *     - `table` (JTable): The table object to open the form for.
+       *     - `tableId` (string): The ID of the table to open the form for.
        *     - `row?` ({ [key: string]: any }): (Optional) The row data to load into the form.
        *   - Common to both shapes:
        *     - `isReadOnly` (boolean): If `true`, the form will be displayed in read‐only mode.

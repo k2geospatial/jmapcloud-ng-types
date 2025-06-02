@@ -9,7 +9,7 @@ declare type JFormDialogLayerParams = {
 }
 
 declare type JFormDialogTableParams = {
-  table: JTable
+  tableId: JId
   row?: { [key: string]: any }
   isReadOnly: boolean
   onSubmit?: () => void
